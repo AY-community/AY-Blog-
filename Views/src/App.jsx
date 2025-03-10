@@ -15,7 +15,7 @@ import Wait from './Password/emailwait'
 import OTP from './Password/OTP'
 import LoginPermission from './protection/LoginPermission';
 import LogoutPermission from './protection/LogoutPermission';
-import AdminPermission from './protection/adminPermission' ;
+import AdminPermission from './protection/AdminPermission' ;
 
 
 const BackgroundChanger = () => {
