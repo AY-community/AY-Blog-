@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Box from "@mui/material/Box";
-import logo from "../../public/logo.png";
+import logo from "../../public/Logo.png";
 import Card from "./card";
 import Modal from '@mui/material/Modal';
 // import bg from "../assets/bg.avif"
