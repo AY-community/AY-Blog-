@@ -1,6 +1,6 @@
 import "./Admin.css";
 import wavyBg from "../assets/wavy.png";
-import logo from "../../public/logo.png";
+import logo from "../../public/Logo.png";
 import uploadImage from "../assets/upload-icon.png"
 import { useState , useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
