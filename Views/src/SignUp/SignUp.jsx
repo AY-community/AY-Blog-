@@ -1,6 +1,6 @@
 import wavyBg from "../assets/wavy.png";
 import "./SignUp.css";
-import logo from "/logo.png";
+import logo from "/Logo.png";
 import { useEffect, useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import fullLogo from "../../public/fullLogo.png";
