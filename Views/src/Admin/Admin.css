@@ -1,0 +1,69 @@
+
+
+.addDescription  {
+ height: 15%;
+ justify-content: stretch;
+}
+
+.userForm>.addDescription>.input{
+    height: 100%;
+}
+
+.userForm>.addDescription>.input>textarea{
+    position: absolute;
+    height: 100%;
+    width: 98%;
+    font-family:var(--font-primary) ;
+    font-weight: 500;
+    word-wrap: break-word;
+    resize: none; 
+    border: none;
+    padding: 0;
+    padding-top: 3px;
+    background-color: transparent;
+   
+}
+
+
+
+
+
+
+
+.addPicture{
+    height: 25%;
+    justify-content: stretch;
+
+}
+
+.userForm>.addPicture>.input{
+    height: 100%;
+
+    
+}
+
+.userForm>.addPicture>.input::after{
+    content: "upload your Photo";
+    width: 100%;
+    font-weight: 500;
+    position: absolute;
+   top: 70%;
+   left: 50%;
+   transform: translate(-20%, 0%);
+
+    
+}
+
+
+.userForm>.addPicture>.input> input{
+    opacity: 0;
+}
+
+
+@media screen and (max-width:600px){
+    .userForm>.addPicture>.input::after{
+        position: absolute;
+        top: 70%;
+        left: 40%;  
+    }
+}

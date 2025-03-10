@@ -1,0 +1,286 @@
+  
+  /* FORM STYLING */
+
+
+.wavyBg-Login{
+    transform: translateX(-25%)   scaleY(1);
+    animation: wavy-Login 2s ease-out forwards;
+  }
+
+  .userForm{
+    opacity: 0;
+    width: 50%;
+    height: 90%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background: var(--bg-form);
+    border-radius: 16px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation:fadeInUp 1s ease forwards ;
+    animation-delay: 0.5s ;    
+  }
+
+  .userForm h1{
+    font-family: var(--font-primary);
+    margin: 0;
+    margin-top: 5%;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+     
+
+  }
+
+  .userForm h6{
+    margin:0;
+    margin: 5% 0;
+    font-weight: 400;
+
+  }
+
+  .userForm image{
+    border-radius:none ;
+  }
+
+
+
+
+  .userForm>.inputDiv>.input{
+    position: relative;
+   width: 99%;
+   height: 2em;
+   border: rgb(229, 229, 229) 1.5px solid;
+   border-radius: 5px;
+   background: rgb(251, 251, 251);
+   font-weight: lighter;
+   
+  }
+
+  .userForm>.inputDiv>.input>input{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    padding: 0px 5px;
+    padding-right: 10%; 
+  }
+
+  .eyeToggle{
+    position: absolute;
+    right: 3%;
+    top: 9%;
+    opacity: 0.6;
+
+  }
+
+
+
+  .userForm>button{
+    width: 60%;
+   }
+
+  .formHeader{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formHeader span{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .userForm> .socialmediaButton{
+    height: 3.5em;
+    background: rgb(251, 251, 251);
+    border: lightgray 1px solid ;
+    border-radius: 30px;
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 5px; 
+    transition: transform 0.5s ease;
+}
+
+.userForm> .socialmediaButton:hover{
+  transform: scale(1.05);
+}
+
+  .userForm > button{
+    animation: none;
+  }
+
+  .inputDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 5px;
+  }
+
+  .userForm>.inputDiv>label{
+    font-size: 0.7em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .userForm>.inputDiv>label>span:last-child{
+    color: darkred;
+  }
+
+  .formFooter{
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    color: black;
+    margin-bottom: 3px;
+
+  }
+
+  .formFooter>.link{
+    color: var(--text-primary);
+    font-size: 0.7em;
+  }
+
+  /* ANIMATION */
+
+
+  @keyframes wavy-Login {
+    0%{
+        transform: translateX(-25%)  scaleY(1);
+         }
+     
+     
+     
+     100%{
+         transform: translateX(-35%)   scaleY(1.1);
+         }
+   
+    
+  }
+
+
+  /*RESPONSIVE DESIGN*/
+
+  @media screen and  (max-width:1130px) and (min-width:750px){
+    .userForm{
+      width: 600px;
+    }
+    
+  }
+
+
+
+  @media screen and  (max-width:750px) and (min-width:500px){
+    .userForm{
+      width: 80%;
+    }
+
+    .inputDiv{
+      width: 75%;
+    }
+
+    .userForm> .socialmediaButton{
+      width: 75%;
+    }
+
+    .formFooter{
+      width: 75%;
+    }
+    
+  }
+
+  @media screen and  (max-width:500px) {
+    .userForm{
+      width: 95%;
+      height: 75%;
+    }
+
+    .userForm> .socialmediaButton{
+      width: 80%;
+    }
+
+    .userForm > .inputDiv{
+      width: 75%;
+    }
+
+    .formFooter{
+      width: 70%;
+    }
+
+
+    .userForm h5{
+      display: none; 
+       }
+    
+  } 
+
+
+  @media screen and (max-height:550px){
+    .userForm h5{
+      display: none; 
+       }
+  }
+
+
+
+  @media screen and (min-width:1300px) and  (max-width:2700px) {
+    .userForm{
+  
+      width: 600px;
+    }
+  }
+
+
+  @media screen and (max-width:600px) and (max-height:580px) {
+    .userForm{
+      width: 90%;
+      height: 95%;
+    }
+  }
+
+
+  @media screen and (min-height:800px){
+    .userForm{
+      height: 60%;
+
+    }
+  }
+
+
+
+
+
+  @media screen and (min-height:1200px){
+    .userForm{
+      height: 600px;
+
+    }
+  }
+
+
+
+    @media screen and (min-width:2700px) {
+      .userForm{
+       /* width: 27%; */
+      width: 600px;
+      }
+     
+    }
+    
+
+    @media screen and (min-width:3500px) {
+      .userForm{
+       width: 700px;}
+     
+    }

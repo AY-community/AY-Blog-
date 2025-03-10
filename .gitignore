@@ -1,0 +1,41 @@
+# Node modules (massive files, should never be committed)
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (security-sensitive data)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor and OS-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build output (if using TypeScript or bundlers)
+dist/
+build/
+out/
+
+# Dependency lockfiles (optional, some prefer committing them)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Debugging & crash reports
+*.pid
+*.seed
+*.pid.lock

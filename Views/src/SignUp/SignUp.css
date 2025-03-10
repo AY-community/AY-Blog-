@@ -1,0 +1,58 @@
+
+ /* FORM STYLING 2 */
+
+.wavyBg-SignUp{
+    transform: translateX(-35%)   scaleY(1.1);
+    animation: wavy-SignUp 2s ease-out forwards;
+}
+
+ .userForm h5{
+    margin:1% 0;
+    font-weight: 400;
+    font-size: 0.7em;
+    
+ }
+
+
+
+ .line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.line-text::before,
+.line-text::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #333;
+    margin: 0 10px;
+}
+
+
+ 
+ /* ANIMATION */
+
+@keyframes wavy-SignUp {
+    0%{
+        transform: translateX(-35%)   scaleY(1.1);
+    }
+     
+     
+     
+     100%{
+         transform: translateX(-45%)   scaleY(1.2);
+         }
+}
+
+
+
+
+
+
+
+

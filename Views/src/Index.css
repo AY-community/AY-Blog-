@@ -1,0 +1,80 @@
+/* VARIABLES */
+
+:root {
+    --bg-primary: #f0f0f0;
+    --bg-form: rgba(226, 226, 226, 0.7);
+    --text-primary: #3d3a4e;
+
+
+    --font-primary: "Montserrat", serif;
+    --font-secondary: "Montserrat", serif;
+    --section-width-xxlarge: 28%;
+    --section-width-xlarge: 35%;
+    --section-width-large: 57%;
+    --section-width-medium: 70%;
+    --section-width-small: 95%;
+    
+  }
+
+
+
+/* MAIN STYLING */
+
+
+   html{
+    width: 100%;
+    overflow-x: hidden;
+   }
+
+
+  * {
+    scroll-behavior: smooth;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    font-family: var(--font-primary);
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+  }
+
+
+  
+  .main {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wavyBg {
+    opacity: 0.8;
+    width: 200%;
+    min-height: 150px;
+    position: absolute;
+    bottom: -2%;
+    left: 0;
+    background-repeat: repeat-x;
+    animation: wavy 2s ease-out forwards;
+    background-size: 100%;
+    border-bottom: black  1px solid;
+  }
+
+
+
+
+
+
+  
+  

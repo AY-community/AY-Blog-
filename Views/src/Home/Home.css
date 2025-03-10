@@ -1,0 +1,230 @@
+
+/* COMPONENT STYLING */
+
+
+.middleSection {
+  text-align: center;
+  max-width: var(--section-width-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.middleh5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  animation: 2.5s fadeInUp;
+  color: var(--text-primary);
+}
+
+.middleh1 {
+  font-size: 2.5em;
+  line-height: 1.4;
+  margin-block: 0;
+  animation: 1.5s fadeInUp;
+  color: var(--text-primary);
+}
+
+.button {
+  min-width: 25%;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--text-primary);
+  background-size: 400%;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+  animation: 3.5s fadeInUp;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(101, 23, 218) 10.8%,
+    rgb(22, 14, 129) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+
+
+/* ANIMATION */
+
+@keyframes wavy {
+  0% {
+    transform: translateX(-20%) scaleY(1.1);
+  }
+
+  100% {
+    transform: translateX(-25%) scaleY(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/*RESPONSIVE DESIGN*/
+ /* BETWEEN 65PX and 1000PX */
+@media screen and (max-width: 1000px) and (min-width: 650px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .middleSection{
+    max-width: var(--section-width-medium);
+  }
+
+  .wavyBg {
+   width: 200%;
+   min-height: 130px;
+   background-size: 50% 50%;
+  }
+}
+
+/*SMALLER THAN 650PX */
+@media screen and (max-width: 650px) {
+
+
+  .middleSection {
+    max-width: var(--section-width-small);
+  }
+  .wavyBg {
+    min-height: 130px;
+    width: 200%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .middleSection {
+    max-width: var(--section-width-small);
+  }
+
+  .middleh1{
+    font-size: 1.6em;
+  }
+
+  .middleh5{
+    font-size: 0.6em;
+
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 1250px)  {
+  .middleSection{
+    max-width: var(--section-width-large);
+  }
+
+}
+
+/* BIGGER THAN 1500PX*/
+@media screen and (min-width: 1520px) {
+
+  body{
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 3em;
+  }
+
+  .middleSection {
+    max-width:47%;
+
+  }
+
+
+}
+
+@media screen and (min-width: 2020px) {
+
+  body{
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 3em;
+  }
+
+  .middleSection {
+    max-width: var(--section-width-xlarge);
+  }
+
+
+}
+
+@media screen and (min-width: 2520px) {
+
+  body{
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 3em;
+  }
+
+  .middleSection {
+    max-width: var(--section-width-xxlarge);
+  }
+
+  .homeButton{
+  min-width: 200px;
+  }
+
+}
