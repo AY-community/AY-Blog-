@@ -42,7 +42,7 @@ const initializePassport = require("./config/passport");
 //MIDDLEWARES
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.use(express.static(path.join(__dirname, "Views")));
+app.use(express.static(path.join(__dirname, "Views" , "dist")));
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -53,6 +53,11 @@ app.use("/", login_outRouter);
 app.use("/", PostRouter);
 app.use("/", BlogRouter);
 
+//RENDER
+
+app.get("*" , (req , res)=>{
+  res.sendFile(path.join(__dirname, "Views" , "dist" , "index.html"))
+})
 
 
 // Enable CORS for all origins
