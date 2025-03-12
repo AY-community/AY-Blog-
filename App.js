@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 
 app.use(
   cors({
-    origin: `${process.env.FRONTEND_URL}`, // Your frontend URL
+    origin: `https://ay-blog-app.onrender.com`, // Your frontend URL
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true, // This is REQUIRED for cookies to work
