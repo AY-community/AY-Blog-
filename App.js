@@ -55,9 +55,10 @@ app.use("/", BlogRouter);
 
 //RENDER
 
-app.get("*" , (req , res)=>{
-  res.sendFile(path.join(__dirname, "Views" , "dist" , "index.html"))
-})
+const __dirname1 = path.resolve();
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname1, "Views", "dist", "index.html"));
+});
 
 
 // Enable CORS for all origins
