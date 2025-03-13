@@ -66,7 +66,7 @@ function BlogCard({
  
 
   async function toggleLike() {
-    const response = await fetch("http://localhost:3000/like", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/like`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ postId }),
