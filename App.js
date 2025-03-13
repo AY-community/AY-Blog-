@@ -47,18 +47,14 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(passport.initialize());
-app.use("/", authRouter);
-app.use("/", signupRouter);
-app.use("/", login_outRouter);
-app.use("/", PostRouter);
-app.use("/", BlogRouter);
+app.use("/api", authRouter);
+app.use("/api", signupRouter);
+app.use("/api", login_outRouter);
+app.use("/api", PostRouter);
+app.use("/api", BlogRouter);
 
 //RENDER
 
-const __dirname1 = path.resolve();
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname1, "Views", "dist", "index.html"));
-});
 
 
 // Enable CORS for all origins
@@ -67,7 +63,7 @@ app.get("*", (req, res) => {
 initializePassport();
 
 //GET STARTED ROUTE
-app.get('/home' , async (req,res) => {
+app.get('/api/home' , async (req,res) => {
   try{
     const token = req.cookies.token;
     if(!token){return res.status(401).json({valid: false , message: "No token provided"})}
@@ -83,6 +79,9 @@ app.get('/home' , async (req,res) => {
 }})
 
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "Views", "dist", "index.html"));
+});
 
 
 

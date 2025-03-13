@@ -16,7 +16,7 @@ export default function ResetSearch(){
      const [h5AnimationOut, setH5AnimationOut] = useState({});
 
      async function checkUser(){
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/reviews`   ,{
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/reviews`   ,{
             method:"GET",
             credentials:"include"
         })

@@ -30,7 +30,7 @@ export default function Reset(){
       setpassError("")
       const password = new FormData(e.target).get("password")
       try {
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/Reset/${resetToken}`, {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/Reset/${resetToken}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

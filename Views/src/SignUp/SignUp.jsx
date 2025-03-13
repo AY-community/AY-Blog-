@@ -16,7 +16,7 @@ export default function SignUp() {
 
   useEffect(( )=>{
   async function checkUserOut(){
-    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/SignUp`  , {method:"GET" , credentials:"include"})
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/SignUp`  , {method:"GET" , credentials:"include"})
     const data = await response.json()
 
    if(response.status === 403){
@@ -36,7 +36,7 @@ checkUserOut();
     const data = Object.fromEntries(formData)
 
    try{
-    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/SignUp` , {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/SignUp` , {
       method:"POST",
       headers: { "Content-Type": "application/json" },
       body:JSON.stringify(data),

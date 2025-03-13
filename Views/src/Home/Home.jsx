@@ -28,7 +28,7 @@ export default function Home() {
   async function checkToken(e){
     e.preventDefault()
     try{
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/home` , {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/home` , {
         method: "GET",
         headers: {
           "Content-Type": "application/json"} ,
@@ -44,7 +44,7 @@ export default function Home() {
         setTimeout(() => {
           navigate(destination);
         }, 500);
-      
+    
 
       delayClick();
 

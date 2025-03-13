@@ -9,7 +9,7 @@ export default function Verify() {
 
   async function verifyToken() {
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/verify/${token}`);
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/verify/${token}`);
       const data = await response.json();
 
       if (response.ok) {

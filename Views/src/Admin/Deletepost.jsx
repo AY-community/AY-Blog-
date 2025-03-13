@@ -13,7 +13,7 @@ export default function Add() {
     e.preventDefault();
     const post = new FormData(e.target).get("post")
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/DeletePost`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/DeletePost`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ post })
@@ -30,7 +30,7 @@ export default function Add() {
 
   async function handleGetting(){
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/deletePost` ,  {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/deletePost` ,  {
         method: "GET",
         credentials: "include" })
       

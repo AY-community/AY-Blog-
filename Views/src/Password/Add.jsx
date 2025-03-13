@@ -19,7 +19,7 @@ export default function Add() {
     const password = new FormData(e.target).get("password");
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/addpassword/${token}`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/addpassword/${token}`,
         {
           method: "POST",
           headers: {

@@ -86,7 +86,7 @@ export default function Blogs() {
   const navigate = useNavigate();
   async function handlefetch() {
     try {
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/Blogs`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/Blogs`, {
         method: "GET",
         credentials: "include",
       });
@@ -111,7 +111,7 @@ export default function Blogs() {
   async function logout(e) {
     e.preventDefault();
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/logout `, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/logout `, {
         method: "POST", 
         credentials: "include",
       });
@@ -140,7 +140,7 @@ export default function Blogs() {
 
   useEffect(() => {
     async function getLike() {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/like`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/like`, {
         method: "GET",
         credentials: "include",
       });

@@ -25,7 +25,7 @@ export default function ResetSearch() {
       const emailSearch = new FormData(e.target).get("emailSearch");
 
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/ResetSearchPassword`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/ResetSearchPassword`,
         {
           method: "POST",
           headers: {
@@ -54,7 +54,7 @@ export default function ResetSearch() {
   useEffect(() => {
     async function checkUserOut() {
       const response = await fetch(
-        "${import.meta.env.VITE_BACKEND_URL}/ResetSearchPassword",
+        `${import.meta.env.VITE_BACKEND_URL}/api/ResetSearchPassword`,
         { method: "GET", credentials: "include" }
       );
 

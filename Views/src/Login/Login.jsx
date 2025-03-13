@@ -21,7 +21,7 @@ export default function Login() {
     const password = e.target.password.value;
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -49,7 +49,7 @@ export default function Login() {
   //CHECK USER 
   useEffect(() => {
     async function checkUserOut() {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/login`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/login`, {
         method: "GET",
         credentials: "include",
       });
@@ -122,7 +122,7 @@ export default function Login() {
           className="socialmediaButton"
           type="button"
           onClick={() => {
-            window.location.href = `${import.meta.env.VITE_BACKEND_URL}/auth/facebook`;
+            window.location.href = `${import.meta.env.VITE_BACKEND_URL}/api/auth/facebook`;
           }}
         >
           <svg
@@ -149,7 +149,7 @@ export default function Login() {
           type="button"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = `${import.meta.env.VITE_BACKEND_URL}/auth/google`;
+            window.location.href = `${import.meta.env.VITE_BACKEND_URL}/api/auth/google`;
           }}
         >
           <svg

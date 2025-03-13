@@ -18,7 +18,7 @@ export default function Login() {
     const formData = new FormData(e.target)
 
      try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/adminAdd`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/adminAdd`, {
         method: "POST",
         body: formData,
       });
@@ -49,7 +49,7 @@ export default function Login() {
 
   async function handleGetting(){
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/adminAdd` ,  {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/adminAdd` ,  {
         method: "GET",
         credentials: "include" })
       

@@ -15,7 +15,7 @@ export default function ResetSearch(){
       try{
           const OTP = new FormData(e.target).get("OTP")
 
-          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/OTP` ,  {
+          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/OTP` ,  {
                  method: "POST",
                 headers: {
                  "Content-Type": "application/json",
